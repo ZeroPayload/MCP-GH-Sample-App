@@ -1,0 +1,12 @@
+{
+  "name": "mcp-gh-sample-app",
+  "version": "1.0.0",
+  "description": "Sample app demonstrating usage of MCP Server to use Github via Docker Desktop.",
+  "main": "login.html",
+  "scripts": {
+    "test": "node login.test.node.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}
