@@ -18,10 +18,10 @@ async function runTests() {
     let passed = 0, failed = 0;
     function assertEqual(actual, expected, msg) {
         if (actual === expected) {
-            console.log('?', msg);
+            console.log('✔', msg);
             passed++;
         } else {
-            console.error('?', msg, `(Expected: ${expected}, Got: ${actual})`);
+            console.error('✖', msg, `(Expected: ${expected}, Got: ${actual})`);
             failed++;
         }
     }
