@@ -4,9 +4,12 @@
   "description": "Sample app demonstrating usage of MCP Server to use Github via Docker Desktop.",
   "main": "login.html",
   "scripts": {
-    "test": "node login.test.node.js"
+    "test": "node login.test.node.js",
+    "deploy": "npx gh-pages -d ."
   },
   "devDependencies": {
-    "jsdom": "^24.0.0"
-  }
+    "jsdom": "^24.1.3",
+    "gh-pages": "^6.0.0"
+  },
+  "private": true
 }
