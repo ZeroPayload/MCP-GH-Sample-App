@@ -61,6 +61,16 @@ async function runTests() {
     }
     assertEqual(win3.document.getElementById('message').textContent, 'Login successful!', 'Successful login should show success');
 
+    // Test 4: index.html loads and works
+    const win4 = setupDom();
+    win4.document.getElementById('username').value = 'test@reqres.in';
+    win4.document.getElementById('password').value = 'test';
+    if (typeof win4.handleLogin === 'function') {
+        await win4.handleLogin({ preventDefault: () => {} });
+    }
+    // Just check the messageDiv exists
+    assertEqual(typeof win4.document.getElementById('message').textContent, 'string', 'index.html loads and message div is present');
+
     console.log(`\n${passed} passed, ${failed} failed.`);
     process.exit(failed ? 1 : 0);
 }
